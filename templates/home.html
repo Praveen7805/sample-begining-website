@@ -15,10 +15,18 @@
   </head>
   <body>
     <div class="container">
-    <h1 class="text-center mt-2 mb-4">NOVA INDUSTRIES</h1>
+    <h1 class="text-center mt-2 mb-4">{{company_name}}</h1>
       <img  class="img-fluid" id="banner" src="https://sample-begining-website-1--praveenmarimuth.repl.co/static/banner.jpg" >
     <h2 class="text-center mt-4 mb-4">ABOUT NOVA INDUSTRIES</h2>
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae consequat arcu. Nam at eros nec velit cursus rutrum. Proin finibus pellentesque nisl vel porttitor. Aliquam vulputate facilisis eros et eleifend. In consequat, ligula lacinia placerat imperdiet, eros nunc ultrices nisl, in maximus arcu ante eu sem.</p>
+      <h2 class="text-center">OPEN POSITIONS</h2>
+      <h3 class="mt-4 mb-4">Available Jobs</h3>
+      <div>
+        {% for job in jobs %}
+        {% include 'jobitem.html'%}
+       
+        {% endfor %}
+      </div>
       <div class="text-center">
     <button class="btn btn-primary btn-lg">Contact us</button>
         <h6 class="mt-4">Copyright 2023 NOVA INDUSTRIES</h6>
